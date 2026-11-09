@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: board
+  profiles:
+    active: local          # 접속 정보는 application-local.yml (Git에 올리지 않는다)
+  flyway:
+    enabled: false         # 마이그레이션은 Flyway CLI로 직접 실행한다 (자동 실행은 부록 A)
+  jpa:
+    hibernate:
+      ddl-auto: validate   # 테이블은 Flyway만 만든다. JPA는 맞는지 검사만 한다
+    open-in-view: false
